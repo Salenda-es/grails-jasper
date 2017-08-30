@@ -16,7 +16,7 @@
 
  package grails.plugins.jasper
 
-import grails.transaction.Transactional
+import grails.gorm.transactions.Transactional
 import groovy.sql.Sql
 
 import java.lang.reflect.Field
@@ -171,8 +171,7 @@ class JasperService {
             System.setProperty("jasper.reports.compile.temp", tempFolder.getAbsolutePath())
 
             if (!tempFolder.exists()) {
-                def ant = new AntBuilder()
-                ant.mkdir(dir: tempFolder.getAbsolutePath())
+                tempFolder.mkdirs()
                 if (!tempFolder.exists()) {
                     throw new Exception("Unable to create temp folder: ${tempFolder.getPath()}")
                 }

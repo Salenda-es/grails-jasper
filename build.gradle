@@ -16,7 +16,7 @@ plugins {
     id "com.jfrog.bintray" version "1.1"
 }
 
-version "2.0.0.RC1"
+version "2.0.1.RC1"
 group "org.grails.plugins"
 
 apply plugin: 'maven-publish'
@@ -26,7 +26,7 @@ apply plugin: "spring-boot"
 apply plugin: "org.grails.grails-plugin"
 apply plugin: "org.grails.grails-gsp"
 // Used for publishing to central repository, remove if not needed
-apply from: 'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/grailsCentralPublishing.gradle'
+//apply from: 'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/grailsCentralPublishing.gradle'
 apply from: 'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/bintrayPublishing.gradle'
 
 ext {
@@ -61,6 +61,7 @@ dependencies {
     provided "org.grails:grails-dependencies"
     provided 'javax.servlet:javax.servlet-api:3.1.0'
 
+    testCompile "org.grails:grails-test-mixins:3.3.0.RC1"
     testCompile "org.grails:grails-plugin-testing"
 
     console "org.grails:grails-console"
@@ -112,7 +113,7 @@ dependencies {
 
     compile('org.apache.poi:poi:3.10-FINAL')
 
-    compile('org.grails.plugins:hibernate')
+    compile('org.grails.plugins:hibernate5')
     compile('commons-io:commons-io:2.2')
 
 }

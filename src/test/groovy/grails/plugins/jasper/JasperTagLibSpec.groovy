@@ -18,7 +18,7 @@ package grails.plugins.jasper
 
 import grails.test.mixin.TestFor
 import grails.test.mixin.integration.Integration
-import grails.transaction.Rollback
+import grails.gorm.transactions.Rollback
 import org.grails.web.util.WebUtils
 import org.springframework.web.context.request.RequestAttributes
 import spock.lang.Specification

@@ -16,7 +16,7 @@ package grails.plugins.jasper
 
 
 import grails.test.mixin.integration.Integration
-import grails.transaction.Rollback
+import grails.gorm.transactions.Rollback
 import spock.lang.Specification
 
 /**

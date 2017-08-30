@@ -2,10 +2,10 @@ package grails.plugins.jasper
 
 import grails.plugins.Plugin
 import net.sf.jasperreports.j2ee.servlets.ImageServlet
-import org.springframework.boot.context.embedded.ServletRegistrationBean
+import org.springframework.boot.web.servlet.ServletRegistrationBean
 
 class JasperGrailsPlugin extends Plugin {
-    def grailsVersion = "3.0.2 > *"
+    def grailsVersion = "3.3.0 > *"
     def pluginExcludes = [
             "grails-app/views/error.gsp",
             'docs/**'
